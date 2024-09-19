@@ -44,10 +44,10 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    git
-    wget
     curl
+    git
     nixfmt-rfc-style
+    wget
   ];
 
   networking.hostId = "f7ceb750";

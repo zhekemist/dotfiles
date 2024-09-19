@@ -24,10 +24,14 @@
     files = [ "/etc/machine-id" ];
     users.tobias = {
       directories = [
-        # firefox
+        ".config/discord"
+
         ".mozilla"
 
-        # vscode
+        ".local/share/TelegramDesktop"
+
+        ".config/ticktick"
+
         ".config/Code"
         ".vscode"
       ];

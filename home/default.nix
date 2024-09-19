@@ -12,10 +12,17 @@
   home.username = "tobias";
   home.homeDirectory = "/home/tobias";
 
-  home.packages = with pkgs; [
-    firefox
-    vscode
-  ];
+  home.packages =
+    (with pkgs; [
+      firefox
+      vscode
+      xsel
+    ])
+    ++ (with pkgs-unstable; [
+      discord
+      telegram-desktop
+      ticktick
+    ]);
 
   programs.git = {
     enable = true;
