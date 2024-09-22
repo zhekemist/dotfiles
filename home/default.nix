@@ -46,6 +46,15 @@
       videos = "videos";
     };
 
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = "org.gnome.Evince.desktop";
+      "text/markdown" = "org.gnome.TextEditor.desktop";
+      "text/plain" = "org.gnome.TextEditor.desktop";
+    };
+  };
+
   home.stateVersion = "24.05";
   programs.home-manager.enable = true;
 }
