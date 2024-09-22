@@ -24,6 +24,8 @@
     files = [ "/etc/machine-id" ];
     users.tobias = {
       directories = [
+        ".config/calibre"
+
         ".config/discord"
 
         ".mozilla"
