@@ -83,6 +83,8 @@
 
   services.zfs.trim.enable = true;
 
+  services.zfs.autoSnapshot.enable = true;
+
   security.rtkit.enable = true;
 
   zramSwap.enable = true;

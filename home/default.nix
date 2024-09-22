@@ -25,12 +25,6 @@
       ticktick
     ]);
 
-  programs.git = {
-    enable = true;
-    userName = "Tobias";
-    userEmail = "79578794+zhekemist@users.noreply.github.com";
-  };
-
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -38,6 +32,30 @@
       ll = "ls -l";
       ls = "ls --color=tty";
       nxo-rebuild = "sudo nixos-rebuild switch --flake ~/dotfiles";
+    };
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "Tobias";
+    userEmail = "79578794+zhekemist@users.noreply.github.com";
+    extraConfig = {
+
+    };
+  };
+
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+      IdentityAgent = "''${XDG_RUNTIME_DIR}/ssh-tpm-agent.sock"
+      IdentityFile = "~/.ssh/id_ecdsa.pub"
+    '';
+    matchBlocks = {
+      minecraft-server = {
+        hostname = "130.162.32.127";
+        user = "opc";
+        port = 22;
+      };
     };
   };
 

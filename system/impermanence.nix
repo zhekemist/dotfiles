@@ -48,8 +48,6 @@
     files = [ ];
     users.tobias = {
       directories = [
-        ".ssh"
-
         "archive"
         "dotfiles"
         "projects"
@@ -63,7 +61,11 @@
         "templates"
         "videos"
       ];
-      files = [ ];
+      files = [
+        ".ssh/id_ecdsa.pub"
+        ".ssh/id_ecdsa.tpm"
+        ".ssh/known_hosts"
+      ];
     };
   };
 
