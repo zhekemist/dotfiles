@@ -83,6 +83,15 @@
     };
   };
 
+  home.file.".clang-format" = {
+    text = ''
+      BasedOnStyle: Chromium
+      BreakBeforeBraces: Stroustrup
+      AccessModifierOffset: -2
+      IndentWidth:	4
+    '';
+  };
+
   home.stateVersion = "24.05";
   programs.home-manager.enable = true;
 }
