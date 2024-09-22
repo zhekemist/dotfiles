@@ -31,6 +31,16 @@
     userEmail = "79578794+zhekemist@users.noreply.github.com";
   };
 
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      l = "ls -alh";
+      ll = "ls -l";
+      ls = "ls --color=tty";
+      nxo-rebuild = "sudo nixos-rebuild switch --flake ~/dotfiles";
+    };
+  };
+
   xdg.userDirs =
     {
       enable = true;
