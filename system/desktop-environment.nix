@@ -15,6 +15,7 @@
   services.xserver.xkb = {
     layout = "at";
     variant = "";
+    options = "ctrl:nocaps";
   };
 
   # exclude any unneeded bloatware
