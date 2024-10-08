@@ -77,7 +77,12 @@
     pulse.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
+    wireplumber.extraConfig.wireplumber = {
+        "wireplumber.settings"."device.routes.default-sink-volume" = "0.0";
+    };
   };
+
+  hardware.bluetooth.powerOnBoot = false;
 
   services.printing.enable = true;
   services.avahi = {
