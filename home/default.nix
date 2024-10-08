@@ -93,6 +93,10 @@
     '';
   };
 
+  home.file.".config/emacs" = {
+    source = ../emacs;
+  };
+
   home.stateVersion = "24.05";
   programs.home-manager.enable = true;
 }
