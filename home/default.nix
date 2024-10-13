@@ -15,7 +15,6 @@
   home.packages =
     (with pkgs; [
       calibre
-      emacs
       firefox
       vscode
       xsel
@@ -36,13 +35,17 @@
     };
   };
 
+  programs.emacs = {
+    enable = true;
+    extraPackages = epkgs: with epkgs; [
+      solarized-theme
+    ];
+  };
+
   programs.git = {
     enable = true;
     userName = "Tobias";
     userEmail = "79578794+zhekemist@users.noreply.github.com";
-    extraConfig = {
-
-    };
   };
 
   programs.ssh = {
