@@ -10,8 +10,10 @@
   home.packages = with pkgs; [
     gnome.dconf-editor
 
-    gnomeExtensions.pop-shell
     gnomeExtensions.appindicator
+    gnomeExtensions.pop-shell
+
+    pkgs-unstable.gnome-pomodoro
   ];
 
   gtk = {
@@ -27,6 +29,8 @@
         enabled-extensions = with pkgs.gnomeExtensions; [
           pop-shell.extensionUuid
           appindicator.extensionUuid
+
+          "pomodoro@arun.codito.in"
         ];
         favorite-apps = [
           "firefox.desktop"
