@@ -85,6 +85,10 @@
   hardware.bluetooth.powerOnBoot = false;
 
   services.printing.enable = true;
+  services.printing.drivers = with pkgs; [
+    gutenprint
+    canon-cups-ufr2
+  ];
   services.avahi = {
     enable = true;
     nssmdns4 = true;
