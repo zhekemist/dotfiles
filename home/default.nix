@@ -18,6 +18,7 @@
       firefox
       vscode
       xsel
+      zotero
     ])
     ++ (with pkgs-unstable; [
       discord

@@ -36,6 +36,8 @@
 
         ".config/Code"
         ".vscode"
+
+        ".zotero"
       ];
       files = [ ];
     };
