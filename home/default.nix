@@ -40,6 +40,7 @@
     enable = true;
     extraPackages = epkgs: with epkgs; [
       solarized-theme
+      pdf-tools
     ];
   };
 
