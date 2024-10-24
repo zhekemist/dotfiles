@@ -43,6 +43,7 @@
     extraPackages = epkgs: with epkgs; [
       solarized-theme
       pdf-tools
+      cdlatex
     ];
   };
 
