@@ -16,6 +16,7 @@
     (with pkgs; [
       calibre
       firefox
+      poppler_utils
       vscode
       xsel
       zotero
