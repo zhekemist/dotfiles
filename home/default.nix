@@ -19,12 +19,12 @@
       poppler_utils
       vscode
       xsel
-      zotero
     ])
     ++ (with pkgs-unstable; [
       discord
       telegram-desktop
       ticktick
+      zotero
     ]);
 
   programs.bash = {
