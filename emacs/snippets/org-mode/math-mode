@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: math-mode for org
+# key: $$
+# --
+\\($1\\) $0
