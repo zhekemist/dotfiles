@@ -17,6 +17,7 @@
       calibre
       firefox
       poppler_utils
+      texliveMedium
       vscode
       xsel
     ])
