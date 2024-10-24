@@ -44,6 +44,7 @@
       solarized-theme
       pdf-tools
       cdlatex
+      yasnippet
     ];
   };
 

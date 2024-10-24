@@ -12,3 +12,6 @@
 (add-hook 'org-mode-hook #'turn-on-org-cdlatex)
 
 (pdf-tools-install)
+
+(setq yas-snippet-dirs '("~/.config/emacs/snippets"))
+(yas-global-mode 1)
