@@ -2,4 +2,4 @@
 # name: math-mode for org
 # key: $$
 # --
-\\($1\\) $0
+\\($0\\)
