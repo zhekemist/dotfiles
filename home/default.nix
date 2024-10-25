@@ -44,6 +44,7 @@
     extraPackages = epkgs: with epkgs; [
       auctex
       cdlatex
+      org-fragtog
       pdf-tools
       solarized-theme
       yasnippet
