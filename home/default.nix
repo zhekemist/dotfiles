@@ -16,6 +16,8 @@
     (with pkgs; [
       age
       calibre
+      fira
+      fira-code
       firefox
       poppler_utils
       texliveMedium
@@ -44,7 +46,9 @@
     extraPackages = epkgs: with epkgs; [
       auctex
       cdlatex
+      org-appear
       org-fragtog
+      org-modern
       pdf-tools
       solarized-theme
       yasnippet
