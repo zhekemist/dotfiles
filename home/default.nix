@@ -14,6 +14,7 @@
 
   home.packages =
     (with pkgs; [
+      age
       calibre
       firefox
       poppler_utils
