@@ -2,8 +2,16 @@
 
 (load-theme 'solarized-dark t)
 
-(set-face-attribute 'default nil :family "Fira Code" :height 102)
-(set-face-attribute 'variable-pitch nil :family "Fira Sans" :height 102)
+(set-face-attribute 'default nil
+    :font "Iosevka"
+    :height 108q
+    :weight 'medium)
+(set-face-attribute 'variable-pitch nil
+    :font "Iosevka Aile"
+    :height 108
+    :weight 'medium)
+(set-face-attribute 'bold nil
+    :weight 'heavy)
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -37,5 +45,9 @@
     org-startup-with-latex-preview t
     org-image-actual-width '(300))
 
+;; Org Modern
 (with-eval-after-load 'org (global-org-modern-mode))
-(set-face-attribute 'org-modern-symbol nil :family "Fira Code" :height 102)
+(set-face-attribute 'org-modern-symbol nil
+    :font "Iosevka"
+    :height 108
+    :weight 'medium)

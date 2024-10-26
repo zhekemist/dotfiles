@@ -7,7 +7,7 @@
   ...
 }:
 {
-  imports = [ ./gnome.nix ];
+  imports = [ ./fonts.nix ./gnome.nix ];
 
   home.username = "tobias";
   home.homeDirectory = "/home/tobias";
@@ -16,8 +16,6 @@
     (with pkgs; [
       age
       calibre
-      fira
-      fira-code
       firefox
       poppler_utils
       texliveMedium
