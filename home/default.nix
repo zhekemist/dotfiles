@@ -44,6 +44,7 @@
     extraPackages = epkgs: with epkgs; [
       auctex
       cdlatex
+      ligature
       org-appear
       org-fragtog
       org-modern
