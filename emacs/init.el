@@ -38,7 +38,6 @@
 (add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
 
 (setq-default
-    org-pretty-entities t
     org-hide-emphasis-markers t
     org-use-sub-superscripts "{}"
     org-startup-with-inline-images t
