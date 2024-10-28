@@ -7,7 +7,10 @@
   ...
 }:
 {
-  imports = [ ./fonts.nix ./gnome.nix ];
+  imports = [
+    ./fonts.nix
+    ./gnome.nix
+  ];
 
   home.username = "tobias";
   home.homeDirectory = "/home/tobias";
@@ -18,7 +21,7 @@
       calibre
       firefox
       poppler_utils
-      texliveMedium
+      texliveFull
       vscode
       xsel
     ])
@@ -41,17 +44,18 @@
 
   programs.emacs = {
     enable = true;
-    extraPackages = epkgs: with epkgs; [
-      auctex
-      cdlatex
-      ligature
-      org-appear
-      org-fragtog
-      org-modern
-      pdf-tools
-      solarized-theme
-      yasnippet
-    ];
+    extraPackages =
+      epkgs: with epkgs; [
+        auctex
+        cdlatex
+        ligature
+        org-appear
+        org-fragtog
+        org-modern
+        pdf-tools
+        solarized-theme
+        yasnippet
+      ];
   };
 
   programs.git = {
