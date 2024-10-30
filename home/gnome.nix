@@ -51,12 +51,18 @@
         www = [ "<Super>b" ]; # launch browser
         custom-keybindings = [
           "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
         ];
       };
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
         name = "Launch console";
         binding = "<Super>t";
         command = "kgx";
+      };
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+        name = "Launch emacs";
+        binding = "<Super>e";
+        command = "emacs";
       };
 
       "org/gnome/mutter" = {
