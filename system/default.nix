@@ -31,6 +31,7 @@
       extraGroups = [
         "networkmanager"
         "wheel" # for `sudo`
+        "lp" # scanners
       ];
       hashedPassword = builtins.readFile inputs.user-password;
     };
@@ -94,6 +95,8 @@
     nssmdns4 = true;
     openFirewall = true;
   };
+  hardware.sane.enable = true;
+  hardware.sane.extraBackends = [ pkgs.sane-airscan ];
 
   services.zfs.trim.enable = true;
 
