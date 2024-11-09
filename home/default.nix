@@ -32,6 +32,12 @@
       zotero
     ]);
 
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
   programs.emacs = {
     enable = true;
     extraPackages =
