@@ -51,6 +51,9 @@
     wget
   ];
 
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
   networking.hostId = "f7ceb750";
   networking.hostName = "cosmic-ac";
 
