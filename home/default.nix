@@ -8,6 +8,7 @@
 }:
 {
   imports = [
+    ./emacs
     ./fonts.nix
     ./gnome.nix
   ];
@@ -36,22 +37,6 @@
     enable = true;
     enableZshIntegration = true;
     nix-direnv.enable = true;
-  };
-
-  programs.emacs = {
-    enable = true;
-    extraPackages =
-      epkgs: with epkgs; [
-        auctex
-        cdlatex
-        ligature
-        org-appear
-        org-fragtog
-        org-modern
-        pdf-tools
-        solarized-theme
-        yasnippet
-      ];
   };
 
   programs.git = {
@@ -125,10 +110,6 @@
       AccessModifierOffset: -2
       IndentWidth:	4
     '';
-  };
-
-  home.file.".config/emacs" = {
-    source = ../emacs;
   };
 
   home.stateVersion = "24.05";
