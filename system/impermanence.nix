@@ -28,6 +28,8 @@
 
         ".config/discord"
 
+        ".local/share/direnv/allow"
+
         ".mozilla"
 
         ".local/share/TelegramDesktop"
