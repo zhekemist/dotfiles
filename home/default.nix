@@ -8,9 +8,11 @@
 }:
 {
   imports = [
-    ./emacs
     ./fonts.nix
     ./gnome.nix
+
+    ./emacs
+    ./zshell
   ];
 
   home.username = "tobias";
@@ -58,25 +60,6 @@
         port = 22;
       };
     };
-  };
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-
-    shellAliases = {
-      l = "ls -alh";
-      ll = "ls -l";
-      ls = "ls --color=tty";
-      rebuild-os = "sudo nixos-rebuild switch --flake ~/dotfiles";
-    };
-
-    initExtra = ''
-      autoload -U colors && colors
-      PS1="%{$fg[green]%}[%n@%m %1~]%(#.#.$)%{$reset_color%} "
-    '';
   };
 
   xdg.userDirs =

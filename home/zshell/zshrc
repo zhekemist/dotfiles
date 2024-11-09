@@ -1,0 +1,12 @@
+autoload -U colors && colors
+PS1="%{$fg[green]%}[%n@%m %1~]%(#.#.$)%{$reset_color%} "
+
+init-flake(){
+  if ! [[ -f "flake.nix" ]]; then
+    cp --no-preserve=all @flakeTemplate@ flake.nix
+  fi
+  if ! [[ -f ".envrc" ]]; then
+    echo "use flake" > .envrc
+    direnv allow
+  fi
+}
