@@ -17,6 +17,7 @@
         org-appear
         org-fragtog
         org-modern
+        org-roam
         pdf-tools
         solarized-theme
         yasnippet
