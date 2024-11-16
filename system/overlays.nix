@@ -13,5 +13,6 @@
         config.allowUnfree = final.config.allowUnfree;
       };
     })
+    inputs.emacs-overlay.overlays.emacs
   ];
 }

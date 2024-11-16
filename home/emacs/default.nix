@@ -8,19 +8,13 @@
 {
   programs.emacs = {
     enable = true;
-    extraPackages =
-      epkgs: with epkgs; [
-        auctex
-        cdlatex
-        ligature
-        org-appear
-        org-fragtog
-        org-modern
-        org-roam
-        pdf-tools
-        solarized-theme
-        yasnippet
+    package = pkgs.emacsWithPackagesFromUsePackage {
+      config = ./config/init.el;
+      alwaysEnsure = true;
+      extraEmacsPackages = epkgs: with epkgs; [
+        use-package
       ];
+    };
   };
 
   home.file.".config/emacs" = {

@@ -6,10 +6,14 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
 
-    impermanence.url = "github:nix-community/impermanence";
+    emacs-overlay.url = "github:nix-community/emacs-overlay/master";
+    emacs-overlay.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    emacs-overlay.inputs.nixpkgs-stable.follows = "nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    impermanence.url = "github:nix-community/impermanence";
 
     user-password.url = "file:///persist/secrets/hashed_userpw_tobias";
     user-password.flake = false;
@@ -21,8 +25,9 @@
       nixpkgs,
       nixpkgs-unstable,
       disko,
-      impermanence,
+      emacs-overlay,
       home-manager,
+      impermanence,
       ...
     }@inputs:
     {

@@ -1,7 +1,5 @@
 (setq-default tab-width 4)
 
-(load-theme 'solarized-dark t)
-
 (set-face-attribute 'default nil
     :font "Iosevka"
     :height 108
@@ -16,46 +14,72 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 
-(pdf-tools-install)
 
-(setq yas-snippet-dirs '("~/.config/emacs/snippets"))
-(yas-global-mode 1)
+;; Packages
 
-;; Org Mode
-(require 'org)
-(require 'org-modern)
+(eval-when-compile
+        (require 'use-package))
+(setq use-package-always-ensure t)
 
-(global-set-key (kbd "C-c l") #'org-store-link)
-(global-set-key (kbd "C-c a") #'org-agenda)
-(global-set-key (kbd "C-c c") #'org-capture)
+(use-package solarized-theme
+  :config
+  (load-theme 'solarized-dark t))
 
-(setq-default org-list-demote-modify-bullet '(("+" . "-") ("-" . "*") ("*" . "+")))
-(setq-default org-format-latex-options (plist-put org-format-latex-options :scale 1.3))
+(use-package pdf-tools
+  :config
+  (pdf-loader-install))
 
-(add-hook 'org-mode-hook 'org-appear-mode)
-(add-hook 'org-mode-hook #'turn-on-org-cdlatex)
-(add-hook 'org-mode-hook 'org-fragtog-mode)
-(add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
+(use-package yasnippet
+  :config
+  (setq yas-snippet-dirs '("~/.config/emacs/snippets"))
+  (yas-global-mode 1))
 
-(setq-default
-    org-hide-emphasis-markers t
-    org-use-sub-superscripts "{}"
-    org-startup-with-inline-images t
-    org-startup-with-latex-preview t
-    org-image-actual-width '(300))
+(use-package auctex)
 
-;; Org Modern
-(with-eval-after-load 'org (global-org-modern-mode))
-(set-face-attribute 'org-modern-symbol nil
-    :font "Iosevka"
-    :height 108
-    :weight 'medium)
+(use-package cdlatex
+  :hook (org-mode . turn-on-org-cdlatex))
 
-;; Ligature Support
-(ligature-set-ligatures 't '("-<<" "-<" "-<-" "<--" "<---" "<<-" "<-" "->" "->>" "-->" "--->" "->-" ">-" ">>-"
+(use-package org
+  :ensure nil
+  :bind (("C-c l" . org-store-link)
+		 ("C-c a" . org-agenda)
+		 ("C-c c" . org-capture))
+  :custom
+  (org-list-demote-mode '(("+" . "-") ("-" . "*") ("*" . "+")))
+  (org-hide-emphasis-markers t)
+  (org-use-sub-superscripts "{}")
+  (org-startup-with-inline-images t)
+  (org-startup-with-latex-preview t)
+  (org-image-actual-width '(300))
+  :config
+  (plist-put org-format-latex-options :scale 1.3))
+
+(use-package org-appear
+  :after org
+  :hook (org-mode . org-appear-mode))
+
+(use-package org-fragtog
+  :after org
+  :hook (org-mode . org-fragtog-mode))
+
+(use-package org-modern
+  :after org
+  :config
+  (global-org-modern-mode)
+  (set-face-attribute 'org-modern-symbol nil
+					  :font "Iosevka"
+					  :height 108
+					  :weight 'medium))
+
+(use-package org-roam
+  :after org)
+
+(use-package ligature
+  :config
+  (ligature-set-ligatures 't '("-<<" "-<" "-<-" "<--" "<---" "<<-" "<-" "->" "->>" "-->" "--->" "->-" ">-" ">>-"
                              "=<<" "=<" "=<=" "<==" "<===" "<<=" "<=" "=>" "=>>" "==>" "===>" "=>=" ">=" ">>="
                              "<->" "<-->" "<--->" "<---->" "<=>" "<==>" "<===>" "<====>" "::" ":::" "__"
                              "<~~" "</" "</>" "/>" "~~>" "==" "!=" "<>" "===" "!==" "!==="
                              "<:" ":=" "*=" "*+" "<*" "<*>" "*>" "<|" "<|>" "|>" "<." "<.>" ".>" "+*" "=*" "=:" ":>"
                              "(*" "*)" "/*" "*/" "[|" "|]" "{|" "|}" "++" "+++" "\\/" "/\\" "|-" "-|" "<!--" "<!---"))
-(global-ligature-mode t)
+  (global-ligature-mode t))
