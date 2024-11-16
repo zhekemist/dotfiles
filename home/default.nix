@@ -3,7 +3,6 @@
   inputs,
   lib,
   pkgs,
-  pkgs-unstable,
   ...
 }:
 {
@@ -18,22 +17,20 @@
   home.username = "tobias";
   home.homeDirectory = "/home/tobias";
 
-  home.packages =
-    (with pkgs; [
-      age
-      calibre
-      firefox
-      poppler_utils
-      texliveFull
-      vscode
-      xsel
-    ])
-    ++ (with pkgs-unstable; [
-      discord
-      telegram-desktop
-      ticktick
-      zotero
-    ]);
+  home.packages = with pkgs; [
+    age
+    calibre
+    firefox
+    poppler_utils
+    texliveFull
+    vscode
+    xsel
+
+    unstable.discord
+    unstable.telegram-desktop
+    unstable.ticktick
+    unstable.zotero
+  ];
 
   programs.direnv = {
     enable = true;

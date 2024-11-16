@@ -3,7 +3,6 @@
   inputs,
   lib,
   pkgs,
-  pkgs-unstable,
   ...
 }:
 {
@@ -12,6 +11,7 @@
     ./disk-configuration.nix
     ./hardware-configuration.nix
     ./impermanence.nix
+    ./overlays.nix
     ./tpm-sealed-ssh.nix
   ];
 

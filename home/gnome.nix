@@ -3,7 +3,6 @@
   inputs,
   lib,
   pkgs,
-  pkgs-unstable,
   ...
 }:
 {
@@ -13,7 +12,7 @@
     gnomeExtensions.appindicator
     gnomeExtensions.pop-shell
 
-    pkgs-unstable.gnome-pomodoro
+    unstable.gnome-pomodoro
   ];
 
   gtk = {
