@@ -15,6 +15,10 @@
 
     impermanence.url = "github:nix-community/impermanence";
 
+    pre-commit-hooks.url = "github:cachix/git-hooks.nix";
+    pre-commit-hooks.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    pre-commit-hooks.inputs.nixpkgs-stable.follows = "nixpkgs";
+
     user-password.url = "file:///persist/secrets/hashed_userpw_tobias";
     user-password.flake = false;
   };
@@ -23,21 +27,22 @@
     {
       self,
       nixpkgs,
-      nixpkgs-unstable,
       disko,
-      emacs-overlay,
       home-manager,
       impermanence,
       ...
     }@inputs:
+    let
+      system = "x86_64-linux";
+    in
     {
       nixosConfigurations.cosmic-ac = nixpkgs.lib.nixosSystem rec {
-        system = "x86_64-linux";
+        inherit system;
 
         specialArgs = {
           inherit inputs;
         };
-        
+
         modules = [
           ./system
           disko.nixosModules.disko
@@ -50,6 +55,18 @@
             home-manager.extraSpecialArgs = specialArgs;
           }
         ];
+      };
+
+      checks.${system}.pre-commit-check = inputs.pre-commit-hooks.lib.${system}.run {
+        src = ./.;
+        hooks = {
+          nixfmt-rfc-style.enable = true;
+        };
+      };
+
+      devShells.${system}.default = nixpkgs.legacyPackages.${system}.mkShell {
+        inherit (self.checks.${system}.pre-commit-check) shellHook;
+        buildInputs = self.checks.${system}.pre-commit-check.enabledPackages;
       };
     };
 }
