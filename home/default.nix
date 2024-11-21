@@ -27,6 +27,7 @@
     xsel
 
     unstable.discord
+    unstable.prismlauncher
     unstable.telegram-desktop
     unstable.ticktick
     unstable.zotero

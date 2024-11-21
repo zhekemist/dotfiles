@@ -31,6 +31,8 @@
 
         ".mozilla"
 
+        ".local/share/PrismLauncher"
+
         ".local/share/TelegramDesktop"
 
         ".config/ticktick"
