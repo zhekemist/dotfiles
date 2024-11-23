@@ -29,6 +29,7 @@
     unstable.discord
     unstable.prismlauncher
     unstable.telegram-desktop
+    unstable.texstudio
     unstable.ticktick
     unstable.zotero
   ];

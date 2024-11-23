@@ -35,6 +35,8 @@
 
         ".local/share/TelegramDesktop"
 
+        ".config/texstudio"
+
         ".config/ticktick"
 
         ".config/Code"
