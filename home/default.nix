@@ -22,13 +22,13 @@
     calibre
     firefox
     poppler_utils
-    texliveFull
     vscode
     xsel
 
     unstable.discord
     unstable.prismlauncher
     unstable.telegram-desktop
+    unstable.texliveFull
     unstable.texstudio
     unstable.ticktick
     unstable.zotero
