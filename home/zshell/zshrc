@@ -5,6 +5,11 @@ init-flake(){
   if ! [[ -f "flake.nix" ]]; then
     cp --no-preserve=all @flakeTemplate@ flake.nix
   fi
+  if (git rev-parse --is-inside-work-tree &>/dev/null); then
+    echo "Warning: flake.nix was added to git"
+    git add flake.nix
+  fi
+  git 
   if ! [[ -f ".envrc" ]]; then
     echo "use flake" > .envrc
     direnv allow
