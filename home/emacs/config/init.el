@@ -2,11 +2,11 @@
 
 (set-face-attribute 'default nil
     :font "Iosevka"
-    :height 108
+    :height 115
     :weight 'medium)
 (set-face-attribute 'variable-pitch nil
     :font "Iosevka Aile"
-    :height 108
+    :height 115
     :weight 'medium)
 (set-face-attribute 'bold nil
     :weight 'heavy)
@@ -30,11 +30,17 @@
   (pdf-loader-install))
 
 (use-package yasnippet
+  :custom
+  (yas-snippet-dirs '("~/.config/emacs/snippets"))
   :config
-  (setq yas-snippet-dirs '("~/.config/emacs/snippets"))
   (yas-global-mode 1))
 
-(use-package auctex)
+(use-package tex
+  :ensure auctex
+  :custom
+  (TeX-auto-save t)
+  (TeX-parse-self t)
+  (TeX-master nil))
 
 (use-package cdlatex
   :hook (org-mode . turn-on-org-cdlatex))
@@ -68,7 +74,7 @@
   (global-org-modern-mode)
   (set-face-attribute 'org-modern-symbol nil
 					  :font "Iosevka"
-					  :height 108
+					  :height 115
 					  :weight 'medium))
 
 (use-package org-roam
