@@ -25,6 +25,7 @@
     vscode
     xsel
 
+    unstable.anki
     unstable.discord
     unstable.prismlauncher
     unstable.telegram-desktop

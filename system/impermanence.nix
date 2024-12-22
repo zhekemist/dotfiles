@@ -23,6 +23,8 @@
     files = [ "/etc/machine-id" ];
     users.tobias = {
       directories = [
+        ".local/share/Anki2"
+
         ".config/calibre"
 
         ".config/discord"
