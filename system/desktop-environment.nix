@@ -19,9 +19,9 @@
 
   # exclude any unneeded bloatware
   services.xserver.excludePackages = [ pkgs.xterm ];
-  environment.gnome.excludePackages = with pkgs.gnome; [
-    pkgs.gnome-connections
-    pkgs.gnome-tour
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-connections
+    gnome-tour
 
     baobab # disk usage analyzer
     cheese # photo booth

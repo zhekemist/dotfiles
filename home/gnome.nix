@@ -7,7 +7,7 @@
 }:
 {
   home.packages = with pkgs; [
-    gnome.dconf-editor
+    dconf-editor
 
     gnomeExtensions.appindicator
     gnomeExtensions.pop-shell
