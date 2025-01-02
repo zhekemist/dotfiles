@@ -52,6 +52,9 @@
     enable = true;
     userName = "Tobias";
     userEmail = "79578794+zhekemist@users.noreply.github.com";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 
   programs.ssh = {
