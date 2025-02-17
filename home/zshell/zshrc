@@ -9,7 +9,6 @@ init-flake(){
     echo "Warning: flake.nix was added to git"
     git add flake.nix
   fi
-  git 
   if ! [[ -f ".envrc" ]]; then
     echo "use flake" > .envrc
     direnv allow
