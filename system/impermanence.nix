@@ -35,6 +35,8 @@
 
         ".local/share/PrismLauncher"
 
+        ".stack"
+
         ".local/share/TelegramDesktop"
 
         ".config/texstudio"
