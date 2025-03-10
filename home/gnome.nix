@@ -17,7 +17,10 @@
 
   gtk = {
     enable = true;
-    gtk3.bookmarks = [ "file:///home/tobias/desktop" ];
+    gtk3.bookmarks = [
+      "file:///home/tobias/desktop"
+      "file:///home/tobias/documents/university/applications/masters"
+    ];
   };
 
   dconf = {
