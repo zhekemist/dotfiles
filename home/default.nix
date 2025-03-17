@@ -21,6 +21,7 @@
     age
     calibre
     firefox
+    libreoffice-fresh
     poppler_utils
     vscode
     xsel

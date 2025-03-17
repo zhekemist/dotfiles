@@ -31,6 +31,8 @@
 
         ".local/share/direnv/allow"
 
+        ".config/libreoffice"
+
         ".mozilla"
 
         ".local/share/PrismLauncher"
