@@ -32,5 +32,7 @@
           spacing = "quasi-proportional";
         };
       })
+
+      roboto
     ];
 }
