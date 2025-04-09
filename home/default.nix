@@ -94,6 +94,7 @@
       "application/pdf" = "org.gnome.Evince.desktop";
       "text/markdown" = "org.gnome.TextEditor.desktop";
       "text/plain" = "org.gnome.TextEditor.desktop";
+      "application/vnd.oasis.opendocument.text" = "writer.desktop";
     };
   };
 
