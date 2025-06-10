@@ -23,17 +23,23 @@
     firefox
     libreoffice-fresh
     poppler_utils
+    vdhcoapp
     vscode
     xsel
 
     unstable.anki
     unstable.discord
-    unstable.prismlauncher
     unstable.telegram-desktop
     unstable.texliveFull
     unstable.texstudio
     unstable.ticktick
     unstable.zotero
+
+    (unstable.prismlauncher.override {
+      jdks = [
+        unstable.graalvmPackages.graalvm-oracle_17
+      ];
+    })
   ];
 
   programs.direnv = {
