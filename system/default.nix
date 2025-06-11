@@ -74,7 +74,7 @@
     LC_TIME = "de_AT.UTF-8";
   };
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     audio.enable = true;
@@ -82,7 +82,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     wireplumber.extraConfig.wireplumber = {
-        "wireplumber.settings"."device.routes.default-sink-volume" = "0.0";
+      "wireplumber.settings"."device.routes.default-sink-volume" = "0.0";
     };
   };
 

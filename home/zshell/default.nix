@@ -19,15 +19,15 @@
       rebuild-os = "sudo nixos-rebuild switch --flake ~/dotfiles";
     };
 
-    initExtra = let
-     zshrc = pkgs.substituteAll {
-        src = ./zshrc;
-        flakeTemplate = ../../templates/project-flake.nix;
-     };
-    in
-    ''
-    # Custom .zshrc (see dotfiles > home > zshell)
-    source ${zshrc} 
-    '';
+    initContent =
+      let
+        zshrc = pkgs.replaceVars ./zshrc {
+          flakeTemplate = ../../templates/project-flake.nix;
+        };
+      in
+      ''
+        # Custom .zshrc (see dotfiles > home > zshell)
+        source ${zshrc} 
+      '';
   };
 }
