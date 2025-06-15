@@ -38,6 +38,7 @@
     (unstable.prismlauncher.override {
       jdks = [
         unstable.graalvmPackages.graalvm-oracle_17
+        unstable.graalvmPackages.graalvm-oracle
       ];
     })
   ];
