@@ -99,9 +99,10 @@
     enable = true;
     defaultApplications = {
       "application/pdf" = "org.gnome.Evince.desktop";
+      "application/vnd.oasis.opendocument.text" = "writer.desktop";
       "text/markdown" = "org.gnome.TextEditor.desktop";
       "text/plain" = "org.gnome.TextEditor.desktop";
-      "application/vnd.oasis.opendocument.text" = "writer.desktop";
+      "text/x-tex" = "texstudio.desktop";
     };
   };
 
