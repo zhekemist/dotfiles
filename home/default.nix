@@ -37,6 +37,7 @@
 
     (unstable.prismlauncher.override {
       jdks = [
+        temurin-jre-bin-17
         unstable.graalvmPackages.graalvm-oracle_17
         unstable.graalvmPackages.graalvm-oracle
       ];
