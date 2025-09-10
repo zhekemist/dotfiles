@@ -34,14 +34,6 @@
     unstable.texstudio
     unstable.ticktick
     unstable.zotero
-
-    (unstable.prismlauncher.override {
-      jdks = [
-        temurin-jre-bin-17
-        unstable.graalvmPackages.graalvm-oracle_17
-        unstable.graalvmPackages.graalvm-oracle
-      ];
-    })
   ];
 
   programs.direnv = {
@@ -81,20 +73,19 @@
     };
   };
 
-  xdg.userDirs =
-    {
-      enable = true;
-    }
-    // builtins.mapAttrs (_: value: "${config.home.homeDirectory}/${value}") {
-      desktop = "desktop";
-      documents = "documents";
-      download = "downloads";
-      music = "music";
-      pictures = "pictures";
-      publicShare = "public";
-      templates = "templates";
-      videos = "videos";
-    };
+  xdg.userDirs = {
+    enable = true;
+  }
+  // builtins.mapAttrs (_: value: "${config.home.homeDirectory}/${value}") {
+    desktop = "desktop";
+    documents = "documents";
+    download = "downloads";
+    music = "music";
+    pictures = "pictures";
+    publicShare = "public";
+    templates = "templates";
+    videos = "videos";
+  };
 
   xdg.mimeApps = {
     enable = true;
