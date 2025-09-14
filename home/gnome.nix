@@ -48,6 +48,10 @@
         folder-children = [ ];
       };
 
+      "org/gnome/desktop/background" = {
+        picture-uri = "${../assets/pillars_of_creation.jpg}";
+      };
+
       # custom keybindings
       "org/gnome/settings-daemon/plugins/media-keys" = {
         help = [ ]; # launch help
