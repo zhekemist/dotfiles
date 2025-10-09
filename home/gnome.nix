@@ -18,9 +18,10 @@
   gtk = {
     enable = true;
     gtk3.bookmarks = [
+      "file:///home/tobias/documents/university/current-courses courses"
       "file:///home/tobias/desktop"
-      "file:///home/tobias/documents/university/applications/masters"
       "file:///home/tobias/projects/dynamic-high-dimensional-spanners dynhds"
+      "file:///home/tobias/documents/university/applications/masters"
     ];
   };
 
