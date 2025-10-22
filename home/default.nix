@@ -95,6 +95,7 @@
       "text/markdown" = "org.gnome.TextEditor.desktop";
       "text/plain" = "org.gnome.TextEditor.desktop";
       "text/x-tex" = "texstudio.desktop";
+      "text/html" = "firefox.desktop";
     };
   };
 
