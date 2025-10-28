@@ -7,6 +7,7 @@
 }:
 {
   imports = [
+    ./big-ip-edge-client.nix
     ./desktop-environment.nix
     ./disk-configuration.nix
     ./hardware-configuration.nix
@@ -64,6 +65,8 @@
   networking.hostName = "cosmic-ac";
 
   networking.networkmanager.enable = true;
+
+  big-ip-edge-client.enable = true;
 
   time.timeZone = "Europe/Vienna";
 
