@@ -14,3 +14,30 @@ init-flake(){
     direnv allow
   fi
 }
+
+univie-vpn-connect() {
+  local splitTunnel=${1:-true}
+
+  local vpn_server
+  if [[ "$splitTunnel" == true ]]; then
+    vpn_server="vpn.univie.ac.at"
+  else
+    vpn_server="vpn.univie.ac.at:8443"
+  fi
+
+  local account_password otp_code
+  read -s "account_password?u:account Password: "
+  echo
+  read -s "otp_code?OTP Code: "
+  echo
+
+  f5fpc -s -t $vpn_server -d /etc/ssl/certs/ -u "tobiasw03@${otp_code}" -p $account_password
+}
+
+univie-vpn-status() {
+  f5fpc --info
+}
+
+univie-vpn-disconnect() {
+  f5fpc -o
+}
