@@ -77,7 +77,6 @@
       files = [
         ".ssh/id_ecdsa.pub"
         ".ssh/id_ecdsa.tpm"
-        ".ssh/known_hosts"
       ];
     };
   };

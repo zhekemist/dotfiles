@@ -60,6 +60,7 @@
 
   programs.ssh = {
     enable = true;
+    userKnownHostsFile = "/persist/home/tobias/.ssh/known_hosts";
     extraConfig = ''
       IdentityAgent = "''${XDG_RUNTIME_DIR}/ssh-tpm-agent.sock"
       IdentityFile = "~/.ssh/id_ecdsa.pub"
