@@ -71,6 +71,10 @@
         user = "opc";
         port = 22;
       };
+      univie-par-alma = {
+        hostname = "alma.par.univie.ac.at";
+        user = "a11743321";
+      };
     };
   };
 
