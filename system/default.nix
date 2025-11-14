@@ -66,6 +66,29 @@
 
   networking.networkmanager.enable = true;
 
+  networking.firewall.allowedTCPPorts = [ 50000 ];
+
+  services.nginx = {
+    enable = true;
+    virtualHosts.localhost = {
+      root = "/home/tobias/public";
+      listen = [
+        {
+          addr = "0.0.0.0";
+          port = 50000;
+        }
+      ];
+      locations."/" = {
+        extraConfig = ''
+          autoindex on;
+          allow 192.168.0.0/24;
+          deny all;
+        '';
+      };
+    };
+  };
+  systemd.services.nginx.serviceConfig.ProtectHome = "read-only";
+
   big-ip-edge-client.enable = true;
 
   time.timeZone = "Europe/Vienna";
