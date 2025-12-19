@@ -29,10 +29,12 @@
 
     unstable.anki
     unstable.discord
+    unstable.jetbrains-toolbox
     unstable.telegram-desktop
     unstable.texliveFull
     unstable.texstudio
     unstable.ticktick
+    unstable.uv
     unstable.zotero
   ];
 
