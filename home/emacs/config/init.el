@@ -1,11 +1,11 @@
 (setq-default tab-width 4)
 
 (set-face-attribute 'default nil
-    :font "Iosevka"
+    :font "Adwaita Mono"
     :height 115
     :weight 'medium)
 (set-face-attribute 'variable-pitch nil
-    :font "Iosevka Aile"
+    :font "Adwaita Sans"
     :height 115
     :weight 'medium)
 (set-face-attribute 'bold nil
