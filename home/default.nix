@@ -17,25 +17,24 @@
   home.username = "tobias";
   home.homeDirectory = "/home/tobias";
 
-  home.packages = with pkgs; [
+  home.packages = with pkgs.unstable; [
     age
+    anki
     calibre
+    discord
     firefox
+    jetbrains-toolbox
     libreoffice-fresh
-    poppler_utils
+    poppler-utils
+    telegram-desktop
+    texliveFull
+    texstudio
+    ticktick
+    uv
     vdhcoapp
     vscode
     xsel
-
-    unstable.anki
-    unstable.discord
-    unstable.jetbrains-toolbox
-    unstable.telegram-desktop
-    unstable.texliveFull
-    unstable.texstudio
-    unstable.ticktick
-    unstable.uv
-    unstable.zotero
+    zotero
   ];
 
   programs.direnv = {
