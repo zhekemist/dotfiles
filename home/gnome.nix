@@ -67,7 +67,7 @@
       };
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
         name = "Launch VS Code";
-        binding = "<Super>v";
+        binding = "<Super>c";
         command = "vscode";
       };
 
