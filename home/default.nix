@@ -51,21 +51,27 @@
 
   programs.git = {
     enable = true;
-    userName = "Tobias";
-    userEmail = "79578794+zhekemist@users.noreply.github.com";
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Tobias";
+        email = "79578794+zhekemist@users.noreply.github.com";
+      };
       init.defaultBranch = "main";
     };
   };
 
   programs.ssh = {
     enable = true;
-    userKnownHostsFile = "/persist/home/tobias/.ssh/known_hosts";
     extraConfig = ''
       IdentityAgent = "''${XDG_RUNTIME_DIR}/ssh-tpm-agent.sock"
       IdentityFile = "~/.ssh/id_ecdsa.pub"
     '';
     matchBlocks = {
+      "*" = {
+        userKnownHostsFile = "/persist/home/tobias/.ssh/known_hosts";
+        serverAliveInterval = 60;
+        serverAliveCountMax = 10;
+      };
       minecraft-server = {
         hostname = "130.162.32.127";
         user = "opc";
@@ -76,6 +82,7 @@
         user = "a11743321";
       };
     };
+    enableDefaultConfig = false;
   };
 
   xdg.userDirs = {
