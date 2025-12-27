@@ -66,9 +66,9 @@
         command = "kgx";
       };
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-        name = "Launch emacs";
-        binding = "<Super>e";
-        command = "emacs";
+        name = "Launch VS Code";
+        binding = "<Super>v";
+        command = "vscode";
       };
 
       "org/gnome/mutter" = {

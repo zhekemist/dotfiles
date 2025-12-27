@@ -10,7 +10,6 @@
     ./fonts.nix
     ./gnome.nix
 
-    ./emacs
     ./zshell
   ];
 
