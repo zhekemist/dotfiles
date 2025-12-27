@@ -66,9 +66,9 @@
         command = "kgx";
       };
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-        name = "Launch VS Code";
+        name = "Launch Visual Studio Code";
         binding = "<Super>c";
-        command = "vscode";
+        command = "code";
       };
 
       "org/gnome/mutter" = {
