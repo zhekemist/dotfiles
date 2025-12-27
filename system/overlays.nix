@@ -9,8 +9,8 @@
   nixpkgs.overlays = [
     (final: prev: {
       unstable = import inputs.nixpkgs-unstable {
-        system = final.system;
-        config.allowUnfree = final.config.allowUnfree;
+        inherit (final) config;
+        localSystem = final.stdenv.hostPlatform;
       };
     })
   ];

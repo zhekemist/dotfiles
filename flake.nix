@@ -32,8 +32,6 @@
     in
     {
       nixosConfigurations.cosmic-ac = nixpkgs.lib.nixosSystem rec {
-        inherit system;
-
         specialArgs = {
           inherit inputs;
         };
