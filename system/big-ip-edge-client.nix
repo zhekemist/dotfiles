@@ -12,10 +12,10 @@
     let
       f5fpc = pkgs.stdenv.mkDerivation {
         pname = "f5fpc";
-        version = "7251.2025.0123.1";
+        version = "7261.2025.1009.1";
         src = pkgs.fetchzip {
-          url = "https://ucloud.univie.ac.at/public.php/dav/files/6WJqErRti5iz2tg";
-          hash = "sha256-PvBu4AL7OdCrIenHowEM2p/uz1hrLDTJvkWYpr+FyUA=";
+          url = "https://ucloud.univie.ac.at/public.php/dav/files/jHBoq29zbfTxd4f";
+          hash = "sha256-s+nANg4l2mN7GHk9BydTc2d2R/G1axB7WIEWnq0BZog=";
           stripRoot = false;
           extension = "tar.xz";
         };
@@ -54,6 +54,8 @@
         setuid = true;
       };
 
+      security.pki.certificateFiles = [ "${root-certificate}" ];
+
       system.activationScripts = {
         f5fpc.text =
           let
@@ -63,8 +65,8 @@
             mkdir -p ${svpn-location}
             ln -sf ${config.security.wrapperDir}/${svpn-program}  ${svpn-location}/svpn_x86_64
 
-            mkdir -p /etc/ssl/certs
-            ln -sf ${root-certificate} /etc/ssl/certs/fc5a8f99.0
+            # mkdir -p /etc/ssl/certs
+            # ln -sf  /etc/ssl/certs/fc5a8f99.0
           '';
       };
     };
