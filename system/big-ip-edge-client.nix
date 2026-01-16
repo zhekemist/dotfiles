@@ -32,7 +32,7 @@
       };
       svpn-program = "f5fpc_svpn_${f5fpc.version}";
       root-certificate = pkgs.fetchurl {
-        url = "https://zid.univie.ac.at/fileadmin/user_upload/d_zid/zid-open/daten/datennetz/vpn/Linux/SHA-2_Root_USERTrust_RSA_Certification_Authority.crt";
+        url = "https://crt.sh/?d=1199354";
         hash = "sha256-ij28uSqxxid2R/4quFNrXJgqu/2x8d9XKOAbkGq6lTo=";
       };
     in

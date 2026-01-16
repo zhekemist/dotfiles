@@ -31,7 +31,7 @@ univie-vpn-connect() {
   read -s "otp_code?OTP Code: "
   echo
 
-  f5fpc -s -t $vpn_server -d /etc/ssl/certs/ -u "tobiasw03@${otp_code}" -p $account_password
+  f5fpc -s -t $vpn_server -a @caBundlePath@ -u "tobiasw03@${otp_code}" -p $account_password
 }
 
 univie-vpn-status() {

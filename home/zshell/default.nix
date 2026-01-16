@@ -1,5 +1,6 @@
 {
   config,
+  nixosConfig,
   inputs,
   lib,
   pkgs,
@@ -23,6 +24,7 @@
       let
         zshrc = pkgs.replaceVars ./zshrc {
           flakeTemplate = ../../templates/project-flake.nix;
+          caBundlePath = nixosConfig.security.pki.caBundle;
         };
       in
       ''
