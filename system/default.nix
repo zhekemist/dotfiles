@@ -1,5 +1,6 @@
 {
   config,
+  options,
   inputs,
   lib,
   pkgs,
@@ -67,7 +68,14 @@
     wget
   ];
 
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries =
+      options.programs.nix-ld.libraries.default
+      ++ (with pkgs; [
+        nspr
+      ]);
+  };
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
