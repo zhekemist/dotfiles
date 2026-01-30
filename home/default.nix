@@ -34,6 +34,12 @@
     vscode
     xsel
     zotero
+
+    (prismlauncher.override {
+      jdks = with javaPackages.compiler; [
+        temurin-bin.jre-21
+      ];
+    })
   ];
 
   programs.direnv = {
