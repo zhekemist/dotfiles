@@ -25,7 +25,6 @@
     jetbrains-toolbox
     libreoffice-fresh
     poppler-utils
-    steam-run
     telegram-desktop
     texliveFull
     texstudio
@@ -40,6 +39,29 @@
       jdks = with javaPackages.compiler; [
         temurin-bin.jre-21
         temurin-bin.jre-25
+      ];
+      additionalLibs = with pkgs; [
+        glib
+        nspr
+        nss
+        dbus
+        atk
+        at-spi2-atk
+        cups
+        libgbm
+        expat
+        libxkbcommon
+        cairo
+        pango
+        systemd
+        alsa-lib
+        xorg.libX11
+        xorg.libXcomposite
+        xorg.libXdamage
+        xorg.libXext
+        xorg.libXfixes
+        xorg.libXrandr
+        xorg.libxcb
       ];
     })
   ];
