@@ -70,11 +70,6 @@
 
   programs.nix-ld = {
     enable = true;
-    libraries =
-      options.programs.nix-ld.libraries.default
-      ++ (with pkgs; [
-        nspr
-      ]);
   };
 
   programs.zsh.enable = true;

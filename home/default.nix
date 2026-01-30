@@ -25,6 +25,7 @@
     jetbrains-toolbox
     libreoffice-fresh
     poppler-utils
+    steam-run
     telegram-desktop
     texliveFull
     texstudio
