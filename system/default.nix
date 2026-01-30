@@ -72,6 +72,15 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
+  programs.gamemode = {
+    enable = true;
+
+    settings.custom = {
+      start = "${pkgs.libnotify}/bin/notify-send 'GameMode activated!'";
+      end = "${pkgs.libnotify}/bin/notify-send 'GameMode deactivated!'";
+    };
+  };
+
   networking.hostId = "f7ceb750";
   networking.hostName = "cosmic-ac";
 
