@@ -37,6 +37,7 @@
 
     (prismlauncher.override {
       jdks = with javaPackages.compiler; [
+        temurin-bin.jre-17
         temurin-bin.jre-21
         temurin-bin.jre-25
       ];
