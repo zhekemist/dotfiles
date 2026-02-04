@@ -24,6 +24,7 @@
     firefox
     jetbrains-toolbox
     libreoffice-fresh
+    mattermost-desktop
     poppler-utils
     telegram-desktop
     texliveFull
