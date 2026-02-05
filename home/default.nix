@@ -30,7 +30,6 @@
     texliveFull
     texstudio
     ticktick
-    uv
     vdhcoapp
     vscode
     xsel
