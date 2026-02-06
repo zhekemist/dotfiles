@@ -62,6 +62,11 @@
     wget
   ];
 
+  # temporary workaround for GTK3 apps crashing when using a file picker
+  environment.extraInit = ''
+    export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
+  '';
+
   programs.nix-ld = {
     enable = true;
   };
