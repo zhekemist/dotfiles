@@ -35,9 +35,9 @@
 
         ".mozilla"
 
-        ".local/share/PrismLauncher"
+        ".config/Mattermost"
 
-        ".stack"
+        ".local/share/PrismLauncher"
 
         ".local/share/TelegramDesktop"
 
