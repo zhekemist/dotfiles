@@ -31,6 +31,7 @@
     texstudio
     ticktick
     vdhcoapp
+    veracrypt
     vscode
     xsel
     zotero
