@@ -26,6 +26,7 @@
     libreoffice-fresh
     mattermost-desktop
     poppler-utils
+    restic
     telegram-desktop
     texliveFull
     texstudio
