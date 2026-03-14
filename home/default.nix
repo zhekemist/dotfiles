@@ -37,6 +37,8 @@
     xsel
     zotero
 
+    kdePackages.ghostwriter
+
     (prismlauncher.override {
       jdks = with javaPackages.compiler; [
         temurin-bin.jre-17
