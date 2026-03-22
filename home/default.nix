@@ -25,12 +25,14 @@
     jetbrains-toolbox
     libreoffice-fresh
     mattermost-desktop
+    obsidian
     poppler-utils
     restic
     telegram-desktop
     texliveFull
     texstudio
     ticktick
+    uv
     vdhcoapp
     veracrypt
     vscode
