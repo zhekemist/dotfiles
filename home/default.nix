@@ -37,6 +37,7 @@
     veracrypt
     vscode
     xsel
+    zoom-us
     zotero
 
     kdePackages.ghostwriter
