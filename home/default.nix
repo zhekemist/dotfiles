@@ -33,7 +33,6 @@
     texstudio
     ticktick
     uv
-    vdhcoapp
     veracrypt
     vscode
     xsel
