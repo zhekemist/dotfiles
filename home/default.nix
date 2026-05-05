@@ -84,6 +84,8 @@
         hide_env_diff = true;
       };
     };
+
+    stdlib = builtins.readFile config/direnvrc;
   };
 
   programs.git = {
