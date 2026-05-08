@@ -19,6 +19,7 @@
   home.packages = with pkgs.unstable; [
     age
     anki
+    antigravity
     calibre
     discord
     firefox
