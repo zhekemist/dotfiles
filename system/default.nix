@@ -58,7 +58,7 @@
   environment.systemPackages = with pkgs; [
     curl
     git
-    nixfmt-rfc-style
+    nixfmt
     wget
   ];
 

@@ -125,6 +125,8 @@
     enableDefaultConfig = false;
   };
 
+  programs.tmux.enable = true;
+
   xdg.userDirs = {
     enable = true;
   }
