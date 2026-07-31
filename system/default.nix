@@ -20,7 +20,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.reusePassphrases = true;
+  boot.zfs.forceImportRoot = false;
+
+  # TODO: Invalid option.
+  # boot.initrd.luks.reusePassphrases = true;
 
   users.mutableUsers = false;
   users.users = {

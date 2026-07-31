@@ -19,7 +19,7 @@
   home.packages = with pkgs.unstable; [
     age
     anki
-    antigravity
+    antigravity-ide
     calibre
     discord
     firefox
@@ -63,13 +63,13 @@
         pango
         systemd
         alsa-lib
-        xorg.libX11
-        xorg.libXcomposite
-        xorg.libXdamage
-        xorg.libXext
-        xorg.libXfixes
-        xorg.libXrandr
-        xorg.libxcb
+        libx11
+        libxcomposite
+        libxdamage
+        libxext
+        libxfixes
+        libxrandr
+        libxcb
       ];
     })
   ];
@@ -106,20 +106,16 @@
       IdentityAgent = "''${XDG_RUNTIME_DIR}/ssh-tpm-agent.sock"
       IdentityFile = "~/.ssh/id_ecdsa.pub"
     '';
-    matchBlocks = {
+    settings = {
       "*" = {
         userKnownHostsFile = "/persist/home/tobias/.ssh/known_hosts";
         serverAliveInterval = 60;
         serverAliveCountMax = 10;
       };
-      minecraft-server = {
+      "minecraft-server" = {
         hostname = "130.162.32.127";
         user = "opc";
         port = 22;
-      };
-      univie-par-alma = {
-        hostname = "alma.par.univie.ac.at";
-        user = "a11743321";
       };
     };
     enableDefaultConfig = false;
@@ -129,6 +125,7 @@
 
   xdg.userDirs = {
     enable = true;
+    setSessionVariables = true;
   }
   // builtins.mapAttrs (_: value: "${config.home.homeDirectory}/${value}") {
     desktop = "desktop";

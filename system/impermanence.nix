@@ -6,9 +6,10 @@
   ...
 }:
 {
-  boot.initrd.postDeviceCommands = lib.mkAfter ''
-    zfs rollback -r zroot/root@blank
-  '';
+  # TODO: Fix this. Option is also invalid by now.
+  #boot.initrd.postDeviceCommands = lib.mkAfter ''
+  #  zfs rollback -r zroot/root@blank
+  #'';
 
   environment.persistence."/state" = {
     enable = true;
